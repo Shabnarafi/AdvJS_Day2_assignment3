@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+FirstName:<input type="text" id="fname" placeholder="Show first name"/><br><br>
+LastName:<input type="text" id="lname" placeholder="Show last name"/><br><br>
+Email:<input type="text" id="email" placeholder="Show email address"/><br><br>
+Phone:<input type="text" id="phn" placeholder="Show phone number"/><br><br>
+<input type="button" id="btn" value="Show Details" onclick="getDetails()"/>
+<script>
+function myFunction(){
+	var Person = ["John","Doe","JohnDoe@gmail.com","047124501"];
+	for(var i=0; i<Person.length; i++)
+	{
+		document.getElementsByTagName("input")[i].value = Person[i];
+	}
+	
+}
+function getDetails(){
+	var Person = {firstName:"John",LastName:"Doe",Email:"JohnDoe@gmail.com",PhoneNumber:"047124501"};
+	document.getElementById("fname").value = Person.firstName;
+	document.getElementById("lname").value = Person.LastName;
+	document.getElementById("email").value = Person.Email;
+	document.getElementById("phn").value = Person.PhoneNumber;
+
+}
+
+
+</script>
+</body>
+</html>
